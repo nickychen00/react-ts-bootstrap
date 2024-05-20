@@ -13,7 +13,7 @@
     "styled-components": "5.3.9"
   },
   "dependencies": {
-    "bear-react-grid": "^5.0.13",
+    "bear-react-grid": "5.0.14-alpha.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "5.3.9"
