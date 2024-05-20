@@ -1,9 +1,23 @@
-import {Flex, Container, media, Row, Col, Grid} from 'bear-react-grid';
 import styled, {css} from "styled-components";
 import React, {useState} from "react";
 
 const Sidebars = () => {
-    const [activeId, setIsActiveId] = useState(0);
+    const [activeIds, setIsActiveId] = useState([]);
+
+    const handleSetActiveId = (id: number) => {
+        // 判斷當前id是否存在 activeIds 陣列裡
+        // 存在：將當前的 id 從 activeIds 陣列裡移除
+        // 不存在：將當前 id 新增到 activeIds 陣列裡
+
+        if (activeIds.includes(id)) {
+            const filterData = activeIds.filter(o => o != id);
+            setIsActiveId(filterData);
+        } else {
+            setIsActiveId((pre) => {
+                return [...pre, id];
+            });
+        }
+    };
 
     return (
         <SidebarsRoot>
@@ -155,54 +169,62 @@ const Sidebars = () => {
                 <ListChanges>
                     <UpBlock>
                         <ItemD>
-                            <OutButton onClick={() => setIsActiveId(1)} isActive={activeId === 1}>
+                            <OutButton onClick={() => handleSetActiveId(1)} isActive={activeIds.includes(1)}>
                                 <i className="fa-solid fa-greater-than mr-2"></i>
                                 Home
                             </OutButton>
                         </ItemD>
-                        <HideList>
-                            <HideBtn>Overview</HideBtn>
-                            <HideBtn>Updates</HideBtn>
-                            <HideBtn>Reports</HideBtn>
-                        </HideList>
+                        {activeIds.includes(1) && (
+                            <HideList>
+                                <HideBtn>Overview</HideBtn>
+                                <HideBtn>Updates</HideBtn>
+                                <HideBtn>Reports</HideBtn>
+                            </HideList>
+                        )}
                         <ItemD>
-                            <OutButton onClick={() => setIsActiveId(2)} isActive={activeId === 2}>
+                            <OutButton onClick={() => handleSetActiveId(2)} isActive={activeIds.includes(2)}>
                                 <i className="fa-solid fa-greater-than mr-2"></i>
                                 Dashboard
                             </OutButton>
                         </ItemD>
-                        {/*<HideList>*/}
-                        {/*    <HideBtn>Overview</HideBtn>*/}
-                        {/*    <HideBtn>Weekly</HideBtn>*/}
-                        {/*    <HideBtn>Monthly</HideBtn>*/}
-                        {/*    <HideBtn>Annually</HideBtn>*/}
-                        {/*</HideList>*/}
+                        {activeIds.includes(2) && (
+                            <HideList>
+                                <HideBtn>Overview</HideBtn>
+                                <HideBtn>Weekly</HideBtn>
+                                <HideBtn>Monthly</HideBtn>
+                                <HideBtn>Annually</HideBtn>
+                            </HideList>
+                        )}
                         <ItemD>
-                            <OutButton onClick={() => setIsActiveId(3)} isActive={activeId === 3}>
+                            <OutButton onClick={() => handleSetActiveId(3)} isActive={activeIds.includes(3)}>
                                 <i className="fa-solid fa-greater-than mr-2"></i>
                                 Orders
                             </OutButton>
                         </ItemD>
-                        {/*<HideList>*/}
-                        {/*    <HideBtn>New</HideBtn>*/}
-                        {/*    <HideBtn>Processed</HideBtn>*/}
-                        {/*    <HideBtn>Shipped</HideBtn>*/}
-                        {/*    <HideBtn>Returned</HideBtn>*/}
-                        {/*</HideList>*/}
+                        {activeIds.includes(3) && (
+                            <HideList>
+                                <HideBtn>New</HideBtn>
+                                <HideBtn>Processed</HideBtn>
+                                <HideBtn>Shipped</HideBtn>
+                                <HideBtn>Returned</HideBtn>
+                            </HideList>
+                        )}
                     </UpBlock>
                     <DownBlock>
                         <ItemD>
-                            <OutButton onClick={() => setIsActiveId(4)} isActive={activeId === 4}>
+                            <OutButton onClick={() => handleSetActiveId(4)} isActive={activeIds.includes(4)}>
                                 <i className="fa-solid fa-greater-than mr-2"></i>
                                 Account
                             </OutButton>
                         </ItemD>
-                        {/*<HideList>*/}
-                        {/*    <HideBtn>New...</HideBtn>*/}
-                        {/*    <HideBtn>Profile</HideBtn>*/}
-                        {/*    <HideBtn>Settings</HideBtn>*/}
-                        {/*    <HideBtn>Sign out</HideBtn>*/}
-                        {/*</HideList>*/}
+                        {activeIds.includes(4) && (
+                            <HideList>
+                                <HideBtn>New...</HideBtn>
+                                <HideBtn>Profile</HideBtn>
+                                <HideBtn>Settings</HideBtn>
+                                <HideBtn>Sign out</HideBtn>
+                            </HideList>
+                        )}
                     </DownBlock>
                 </ListChanges>
             </FourthOutside>
@@ -411,13 +433,6 @@ const ListGroup = styled.div`
   border-bottom: 1px solid #dee2e6
 `;
 
-const ETitle = styled.a`
-  display: flex;
-  align-items: center;
-  color: black;
-  padding: 1rem;
-`;
-
 const FifthOutside = styled.div`
   display: flex;
   flex-direction: column;
@@ -443,6 +458,15 @@ const OutButton = styled.button<{
   :hover{
     background-color: #d2f4ea;
   }
+
+  ${props => props.isActive && css`
+    background-color: #d2f4ea;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+    
+    i{
+      transform: rotate(90deg);
+    }
+  `}
 `;
 
 const ItemD = styled.li`
@@ -452,9 +476,7 @@ const ItemD = styled.li`
 const UpBlock = styled.div`
   padding-top: 1rem;
   padding-left: 0.5rem;
-  border-bottom-style: solid;
-  border-top-width: 1px;
-  border-bottom-color: #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 `;
 
 const BeneathB = styled.div`
@@ -462,25 +484,13 @@ const BeneathB = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-shrink: 0;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #b8b9bb;
+  border-top: 1px solid #dee2e6;
   padding: 1rem;
 `;
 
 const DSpan = styled.span`
   font-size: 1.25rem;
   font-weight: 900;
-`;
-
-const DTitle = styled.a`
-  display: flex;
-  align-items: center;
-  color: black;
-  padding-bottom: 1rem;
-  border-bottom-style: solid;
-  border-top-width: 1px;
-  border-bottom-color: #dee2e6;
 `;
 
 const FourthOutside = styled.div`
@@ -524,11 +534,6 @@ const BUl = styled.ul`
   list-style: none;
 `;
 
-const CTitle = styled.a`
-  color: black;
-  padding: 1rem;
-`;
-
 const ThirdOutside = styled.div`
   display: flex;
   flex-direction: column;
@@ -553,19 +558,6 @@ const ItemB = styled.a<{
         color: #fff;
         background-color: #0d6efd;
   `}
-`;
-
-const BTitle = styled.a`
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  color: black;
-  padding-bottom: 1rem;
-
-  border-bottom: solid 1px #b8b9bb;
-  //border-bottom-style: solid;
-  //border-top-width: 1px;
-  //border-bottom-color: #b8b9bb;
 `;
 
 const SecondOutside = styled.div`
@@ -630,17 +622,6 @@ const AUl = styled.ul`
 
 const ASpan = styled.span`
   font-size: 1.5rem;
-`;
-
-const ATitle = styled.a`
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  color: white;
-  padding-bottom: 1rem;
-  border-bottom-style: solid;
-  border-top-width: 1px;
-  border-bottom-color: #b8b9bb;
 `;
 
 const SliderBarHeader = styled.a<{
