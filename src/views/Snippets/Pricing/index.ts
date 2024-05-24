@@ -1,1 +1,1 @@
-export {default} from './Pricingg';
+export {default} from './Pricing';
