@@ -6,14 +6,15 @@ import gridConfig from './config/grid';
 // import Features from './views/Snippets/Features';
 // import Sidebars from './views/Snippets/Sidebars';
 // import Album from './views/Snippets/Album';
-import Pricing from './views/Snippets/Pricing';
+// import Pricing from './views/Snippets/Pricing';
+import Checkout from './views/Snippets/Checkout';
 
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <Pricing/>
+        <Checkout/>
     </GridThemeProvider>
 );
 }
