@@ -9,6 +9,7 @@ import gridConfig from './config/grid';
 // import Pricing from './views/Snippets/Pricing';
 // import Checkout from './views/Snippets/Checkout';
 // import Product from './views/Snippets/Product';
+// import Carousel from './views/Snippets/Carousel';
 import Blog from './views/Snippets/Blog';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <GridThemeProvider gridTheme={gridConfig}>
         <Blog/>
     </GridThemeProvider>
-);
+  );
 }
 
 export default App
