@@ -8,13 +8,14 @@ import gridConfig from './config/grid';
 // import Album from './views/Snippets/Album';
 // import Pricing from './views/Snippets/Pricing';
 // import Checkout from './views/Snippets/Checkout';
-import Product from './views/Snippets/Product';
+// import Product from './views/Snippets/Product';
+import Blog from './views/Snippets/Blog';
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <Product/>
+        <Blog/>
     </GridThemeProvider>
 );
 }
