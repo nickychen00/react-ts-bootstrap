@@ -10,13 +10,15 @@ import gridConfig from './config/grid';
 // import Checkout from './views/Snippets/Checkout';
 // import Product from './views/Snippets/Product';
 // import Carousel from './views/Snippets/Carousel';
-import Blog from './views/Snippets/Blog';
+// import Blog from './views/Snippets/Blog';
+import Dashboard from './views/Snippets/Dashboard';
+
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <Blog/>
+        <Dashboard/>
     </GridThemeProvider>
   );
 }
