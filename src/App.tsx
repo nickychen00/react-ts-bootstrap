@@ -11,14 +11,15 @@ import gridConfig from './config/grid';
 // import Product from './views/Snippets/Product';
 // import Carousel from './views/Snippets/Carousel';
 // import Blog from './views/Snippets/Blog';
-import Dashboard from './views/Snippets/Dashboard';
+// import Dashboard from './views/Snippets/Dashboard';
+import SignIn from './views/Snippets/Sign-in';
 
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <Dashboard/>
+        <SignIn/>
     </GridThemeProvider>
   );
 }
