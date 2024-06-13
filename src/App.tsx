@@ -12,14 +12,15 @@ import gridConfig from './config/grid';
 // import Carousel from './views/Snippets/Carousel';
 // import Blog from './views/Snippets/Blog';
 // import Dashboard from './views/Snippets/Dashboard';
-import SignIn from './views/Snippets/Sign-in';
+// import SignIn from './views/Snippets/Sign-in';
+import StickyFooter from './views/Snippets/Sticky-footer';
 
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <SignIn/>
+        <StickyFooter/>
     </GridThemeProvider>
   );
 }
