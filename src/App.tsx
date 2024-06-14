@@ -13,14 +13,19 @@ import gridConfig from './config/grid';
 // import Blog from './views/Snippets/Blog';
 // import Dashboard from './views/Snippets/Dashboard';
 // import SignIn from './views/Snippets/Sign-in';
-import StickyFooter from './views/Snippets/Sticky-footer';
+// import StickyFooter from './views/Snippets/Sticky-footer';
+import StickyFooterNavbar from './views/Snippets/Sticky-footer-navbar';
+
+
+
+
 
 
 function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <StickyFooter/>
+        <StickyFooterNavbar/>
     </GridThemeProvider>
   );
 }
