@@ -14,8 +14,8 @@ import gridConfig from './config/grid';
 // import Dashboard from './views/Snippets/Dashboard';
 // import SignIn from './views/Snippets/Sign-in';
 // import StickyFooter from './views/Snippets/Sticky-footer';
-import StickyFooterNavbar from './views/Snippets/Sticky-footer-navbar';
-
+// import StickyFooterNavbar from './views/Snippets/Sticky-footer-navbar';
+import Jumbotron from './views/Snippets/Jumbotron';
 
 
 
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <StickyFooterNavbar/>
+        <Jumbotron/>
     </GridThemeProvider>
   );
 }
