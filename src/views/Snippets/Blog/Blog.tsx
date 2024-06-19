@@ -1,4 +1,4 @@
-import {Container, Row, Col} from 'bear-react-grid';
+import {Container, Row, Col} from '@acrool/react-grid';
 import styled from 'styled-components';
 import React from 'react';
 
