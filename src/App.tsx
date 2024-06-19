@@ -1,8 +1,8 @@
-import {GridThemeProvider} from 'bear-react-grid';
+import {GridThemeProvider} from '@acrool/react-grid';
 import gridConfig from './config/grid';
 
 // import Headers from './views/Snippets/Headers';
-// import Heroes from './views/Snippets/Heroes';
+import Heroes from './views/Snippets/Heroes';
 // import Features from './views/Snippets/Features';
 // import Sidebars from './views/Snippets/Sidebars';
 // import Album from './views/Snippets/Album';
@@ -15,7 +15,7 @@ import gridConfig from './config/grid';
 // import SignIn from './views/Snippets/Sign-in';
 // import StickyFooter from './views/Snippets/Sticky-footer';
 // import StickyFooterNavbar from './views/Snippets/Sticky-footer-navbar';
-import Jumbotron from './views/Snippets/Jumbotron';
+// import Jumbotron from './views/Snippets/Jumbotron';
 
 
 
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <GridThemeProvider gridTheme={gridConfig}>
-        <Jumbotron/>
+        <Heroes/>
     </GridThemeProvider>
   );
 }

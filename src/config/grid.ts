@@ -1,4 +1,4 @@
-import {IGridSetting} from 'bear-react-grid';
+import {IGridSetting} from '@acrool/react-grid';
 
 /**
  * bootstrap grid setting

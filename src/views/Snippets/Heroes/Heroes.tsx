@@ -1,4 +1,4 @@
-import {Flex, Container, media, Row, Col, Grid} from 'bear-react-grid';
+import {Flex, Container, media, Row, Col, Grid} from '@acrool/react-grid';
 import styled, {css} from "styled-components";
 import React from "react";
 
@@ -23,12 +23,11 @@ const Heroes = () => {
                 </OneHeroes>
 
             <GraySection/>
-
             {/* Section 2 */}
                 <OneHeroes isVisibleBorderBottom className="pb-0">
                     <Title>Centered screenshot</Title>
                     <Col lg={6} className="mx-auto">
-                        <Desc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
+                        <Desc>222Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
                     </Col>
                     <Flex className="d-flex flex-column align-items-center  flex-sm-row justify-content-sm-center mb-5">
                         <PriButton className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-4">Primary button</PriButton>
