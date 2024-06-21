@@ -368,8 +368,7 @@ const HideList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding: 0 0 1rem 1rem;
 `;
 
 const ListChanges = styled.ul`
@@ -441,8 +440,7 @@ const FifthOutside = styled.div`
 `;
 
 const DownBlock = styled.div`
-  padding-top: 1.5rem;
-  padding-left: 0.5rem;
+  padding: 1.5rem 0 0 .5rem;
 `;
 
 const OutButton = styled.button<{
@@ -474,8 +472,7 @@ const ItemD = styled.li`
 `;
 
 const UpBlock = styled.div`
-  padding-top: 1rem;
-  padding-left: 0.5rem;
+  padding: 1rem 0 0 0.5rem;
   border-bottom: 1px solid #dee2e6;
 `;
 
@@ -511,8 +508,7 @@ const PhotoBImg = styled.img`
 const ItemC = styled.a<{
     isActive?: boolean,
 }>`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #dee2e6;
   display: block;
   color: #0d6efd;
@@ -550,7 +546,6 @@ const ItemB = styled.a<{
   padding: .5rem 1rem;
   text-decoration: none;
   list-style: none;
-  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
 
@@ -584,9 +579,7 @@ const Beneath = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-shrink: 0;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #b8b9bb;
+  border-top: 1px solid #b8b9bb;
   padding-top: 1rem;
 `;
 
@@ -601,7 +594,6 @@ const ItemA = styled.a<{
   padding: .5rem 1rem;
   text-decoration: none;
   list-style: none;
-  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
 

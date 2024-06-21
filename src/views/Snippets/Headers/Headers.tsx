@@ -219,8 +219,7 @@ export default Header;
 
 
 const BorderBottom = styled.div`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #dee2e6;
 `;
@@ -242,8 +241,6 @@ const PhotoImg = styled.img`
 
 const SearchInput = styled.input`
   padding: .5rem 1rem;
-  font-size: 1rem;
-  font-weight: 400;
   color: #212529;
   border: 1px solid #ced4da;
   border-radius: .25rem;
@@ -253,8 +250,7 @@ const SearchInput = styled.input`
 const ThirdHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #dee2e6;
   background-color: #F8F8FF;
 `;
@@ -286,8 +282,6 @@ const LoginButton = styled.button<{
 }>`
   margin-right: .5rem;
   padding: .5rem 1rem;
-  font-size: 1rem;
-  font-weight: 400;
   border-radius: .25rem;
 
   ${props => props.color === 'white' && css`
@@ -331,8 +325,6 @@ const LoginButton = styled.button<{
 const NavA = styled.a<{
     isActive?: boolean,
 }>`
-  font-size: 1rem;
-  font-weight: 400;
   color: #212529;
   padding: .5rem 1rem;
 
@@ -352,8 +344,6 @@ const GraySection = styled.div`
 const HeaderButton = styled.button<{
     isActive?: boolean,
 }>`
-  font-size: 1rem;
-  font-weight: 400;
   color: #0d6efd;
   border-radius: 3px;
   padding: .5rem 1rem;
@@ -367,7 +357,6 @@ const HeaderButton = styled.button<{
 const Title = styled.div`
   color: #212529;
   font-size: 1.5rem;
-  font-weight: 400;
   margin-left: 10px;
 `;
 
@@ -376,8 +365,7 @@ const SimpleHeader = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #dee2e6;
 

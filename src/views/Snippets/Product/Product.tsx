@@ -159,8 +159,7 @@ const ListA = styled.li`
 
 const Title = styled.ul`
   padding-left: 0;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
+  margin: .5rem 0 1rem 0;
   font-size: 1rem;
 `;
 
@@ -172,8 +171,7 @@ const Years = styled.small`
 const Block = styled.div<{
     color: string,
 }>`
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   width: 80%;
   height: 300px;
   border-radius: 21px 21px 0 0;
@@ -243,13 +241,11 @@ const Btn = styled.button`
 const NarrateP = styled.p`
   font-size: 1.25rem;
   font-weight: 500;
-  margin-top: 0;
   margin-bottom: 1rem;
 `;
 
 const FirstH = styled.h1`
   font-weight: 500;
-  margin-top: 0;
   margin-bottom: .5rem;
   font-size: calc(1.1rem + 2.7vw);
 `;
@@ -313,8 +309,7 @@ const Icon = styled.i`
 `;
 
 const NavA = styled.a`
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding: .5rem 0;
   color: #6c757d;
   text-decoration: underline;
 
@@ -332,8 +327,7 @@ const Header = styled.header`
   position: sticky;
   top: 0;
   z-index: 1020;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
+  padding: .25rem 0;
   background-color: rgba(0, 0, 0, .85);
   backdrop-filter: saturate(180%) blur(20px);
 `;

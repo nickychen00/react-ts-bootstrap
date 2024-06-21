@@ -197,8 +197,7 @@ const FooterA = styled.a`
 const Small = styled.small`
   color: #6c757d;
   font-weight: bold;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
+  margin: .5rem 0 1rem 0;
 `;
 
 const Footer = styled.footer`
@@ -235,8 +234,6 @@ const Table = styled.table`
 
 const CardH2 = styled.h5`
   padding: 0.8rem 1rem;
-  margin-bottom: 0;
-  margin-top: 0;
   color: white;
   background-color: #0d6efd;
   border-radius: .2rem .2rem 0 0;
@@ -299,8 +296,6 @@ const Price = styled.div`
 
 const CardH1 = styled.h5`
   padding: 0.8rem 1rem;
-  margin-bottom: 0;
-  margin-top: 0;
   background-color: rgba(0, 0, 0, .03);
   border-bottom: 1px solid rgba(0, 0, 0, .125);
 `;
@@ -329,8 +324,7 @@ const SecondP = styled.p`
 const SecondBlock = styled.div`
   max-width: 700px;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   padding: 1rem;
 `;
 
@@ -359,8 +353,7 @@ const Head = styled.div`
 `;
 
 const PricingContainer = styled(Container)`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   max-width: 960px;
 `;
 

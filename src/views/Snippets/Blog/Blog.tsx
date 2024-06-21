@@ -79,7 +79,7 @@ const Blog = () => {
                     </Col>
                 </Row>
 
-                <Row className="g-5">
+                <Row className="g-9">
                     {/*  文章左邊區塊  */}
                     <Col col={12} md={8}>
                         <TitleH3 className="pb-4 mb-4">From the Firehose</TitleH3>
@@ -367,7 +367,6 @@ const NavBtn = styled.button<{
 const ArticleOl = styled.ol`
   display: block;
   list-style-type: decimal;
-  margin-block-start: 1em;
   margin-block-end: 1em;
   padding-inline-start: 40px;
 `;
@@ -375,7 +374,6 @@ const ArticleOl = styled.ol`
 const ArticleUl = styled.ul`
   display: block;
   list-style-type: disc;
-  margin-block-start: 1em;
   margin-block-end: 1em;
   padding-inline-start: 40px;
 `;

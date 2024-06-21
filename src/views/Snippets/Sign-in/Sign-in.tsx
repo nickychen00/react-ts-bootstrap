@@ -115,8 +115,7 @@ const Main = styled.main`
 `;
 
 const SignInRoot = styled.div`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
   background-color: #f5f5f5;
   height: 100vh;
 `;

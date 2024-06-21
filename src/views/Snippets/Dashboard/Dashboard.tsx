@@ -113,118 +113,118 @@ const Dashboard = () => {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <LineGrey>1,001</LineGrey>
-                                    <LineGrey>random</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                    <LineGrey>placeholder</LineGrey>
-                                    <LineGrey>text</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,002</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                    <LineWhite>irrelevant</LineWhite>
-                                    <LineWhite>visual</LineWhite>
-                                    <LineWhite>layout</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,003</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                    <LineGrey>rich</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                    <LineGrey>tabular</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,003</LineWhite>
-                                    <LineWhite>information</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                    <LineWhite>illustrative</LineWhite>
-                                    <LineWhite>data</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,004</LineGrey>
-                                    <LineGrey>text</LineGrey>
-                                    <LineGrey>random</LineGrey>
-                                    <LineGrey>layout</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,005</LineWhite>
-                                    <LineWhite>dashboard</LineWhite>
-                                    <LineWhite>irrelevant</LineWhite>
-                                    <LineWhite>text</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,006</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                    <LineGrey>illustrative</LineGrey>
-                                    <LineGrey>rich</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,007</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                    <LineWhite>tabular</LineWhite>
-                                    <LineWhite>information</LineWhite>
-                                    <LineWhite>irrelevant</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,008</LineGrey>
-                                    <LineGrey>random</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                    <LineGrey>placeholder</LineGrey>
-                                    <LineGrey>text</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,009</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                    <LineWhite>irrelevant</LineWhite>
-                                    <LineWhite>visual</LineWhite>
-                                    <LineWhite>layout</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,010</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                    <LineGrey>rich</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                    <LineGrey>tabular</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,011</LineWhite>
-                                    <LineWhite>information</LineWhite>
-                                    <LineWhite>placeholder</LineWhite>
-                                    <LineWhite>illustrative</LineWhite>
-                                    <LineWhite>data</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,012</LineGrey>
-                                    <LineGrey>text</LineGrey>
-                                    <LineGrey>placeholder</LineGrey>
-                                    <LineGrey>layout</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,013</LineWhite>
-                                    <LineWhite>dashboard</LineWhite>
-                                    <LineWhite>irrelevant</LineWhite>
-                                    <LineWhite>text</LineWhite>
-                                    <LineWhite>visual</LineWhite>
-                                </tr>
-                                <tr>
-                                    <LineGrey>1,014</LineGrey>
-                                    <LineGrey>dashboard</LineGrey>
-                                    <LineGrey>illustrative</LineGrey>
-                                    <LineGrey>rich</LineGrey>
-                                    <LineGrey>data</LineGrey>
-                                </tr>
-                                <tr>
-                                    <LineWhite>1,015</LineWhite>
-                                    <LineWhite>random</LineWhite>
-                                    <LineWhite>tabular</LineWhite>
-                                    <LineWhite>information</LineWhite>
-                                    <LineWhite>text</LineWhite>
-                                </tr>
+                                <CustomTr>
+                                    <Line>1,001</Line>
+                                    <Line>random</Line>
+                                    <Line>data</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>text</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,002</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>irrelevant</Line>
+                                    <Line>visual</Line>
+                                    <Line>layout</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,003</Line>
+                                    <Line>data</Line>
+                                    <Line>rich</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>tabular</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,003</Line>
+                                    <Line>information</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>illustrative</Line>
+                                    <Line>data</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,004</Line>
+                                    <Line>text</Line>
+                                    <Line>random</Line>
+                                    <Line>layout</Line>
+                                    <Line>dashboard</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,005</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>irrelevant</Line>
+                                    <Line>text</Line>
+                                    <Line>placeholder</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,006</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>illustrative</Line>
+                                    <Line>rich</Line>
+                                    <Line>data</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,007</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>tabular</Line>
+                                    <Line>information</Line>
+                                    <Line>irrelevant</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,008</Line>
+                                    <Line>random</Line>
+                                    <Line>data</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>text</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,009</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>irrelevant</Line>
+                                    <Line>visual</Line>
+                                    <Line>layout</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,010</Line>
+                                    <Line>data</Line>
+                                    <Line>rich</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>tabular</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,011</Line>
+                                    <Line>information</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>illustrative</Line>
+                                    <Line>data</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,012</Line>
+                                    <Line>text</Line>
+                                    <Line>placeholder</Line>
+                                    <Line>layout</Line>
+                                    <Line>dashboard</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,013</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>irrelevant</Line>
+                                    <Line>text</Line>
+                                    <Line>visual</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,014</Line>
+                                    <Line>dashboard</Line>
+                                    <Line>illustrative</Line>
+                                    <Line>rich</Line>
+                                    <Line>data</Line>
+                                </CustomTr>
+                                <CustomTr>
+                                    <Line>1,015</Line>
+                                    <Line>random</Line>
+                                    <Line>tabular</Line>
+                                    <Line>information</Line>
+                                    <Line>text</Line>
+                                </CustomTr>
                                 </tbody>
                             </table>
                         </div>
@@ -239,15 +239,23 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-const LineWhite = styled.td`
+
+
+
+
+
+const Line = styled.td`
   border-bottom: 1px solid #dee2e6;
   padding: .25rem .25rem;
 `;
 
-const LineGrey = styled.td`
-  border-bottom: 1px solid #dee2e6;
-  background-color: #f6f6f5;
-  padding: .25rem .25rem;
+
+const CustomTr = styled.tr`
+    :nth-child(odd){
+      ${Line}{
+        background-color: #f6f6f5;
+      }
+    }    
 `;
 
 const SectionTh = styled.th`
@@ -388,7 +396,6 @@ const SignA = styled.a`
 const SearchInput = styled.input`
   padding: .75rem 1rem;
   border-width: 0;
-  border-radius: 0;
   color: #fff;
   background-color: rgba(255, 255, 255, .1);
   border-color: rgba(255, 255, 255, .1);
@@ -428,8 +435,7 @@ const HiddenBtn = styled.button`
 
 const CompanyA = styled.a`
   white-space: nowrap;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding: .75rem 0;
   font-size: 1rem;
   background-color: rgba(0, 0, 0, .25);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);

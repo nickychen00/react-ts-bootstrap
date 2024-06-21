@@ -20,7 +20,7 @@ const Checkout = () => {
                 </div>
 
                 {/* Section 2 */}
-                <Row className="gx-md-5 gx-lg-5">
+                <Row className="gx-md-9">
 
                     {/*購物車*/}
                     <Col col={12} md={5} lg={4} className="order-md-last">
@@ -85,16 +85,13 @@ const Checkout = () => {
                                 </Col>
                                 <Col col={12}>
                                     <Label>Username</Label>
-                                    <InputGroup>
+                                    <Flex>
                                         <InputGroupText>@</InputGroupText>
                                         <UserInput placeholder="Username"/>
-                                    </InputGroup>
+                                    </Flex>
                                 </Col>
                                 <Col col={12}>
-                                    <Label>
-                                        Email
-                                        <Mark>(Optional)</Mark>
-                                    </Label>
+                                    <Label>Email<Mark>(Optional)</Mark></Label>
                                     <Input placeholder="you@example.com"/>
                                 </Col>
                                 <Col col={12}>
@@ -102,10 +99,7 @@ const Checkout = () => {
                                     <Input placeholder="1234 Main St"/>
                                 </Col>
                                 <Col col={12}>
-                                    <Label>
-                                        Address 2
-                                        <Mark>(Optional)</Mark>
-                                    </Label>
+                                    <Label>Address 2<Mark>(Optional)</Mark></Label>
                                     <Input placeholder="Apartment or suite"/>
                                 </Col>
                                 <Col col={12} md={5} className="d-flex flex-column">
@@ -135,12 +129,12 @@ const Checkout = () => {
 
                                 <Col col={12}>
                                     <Flex className="align-items-center">
-                                        <CheckInput type="checkbox"/>
-                                        <CheckLabel>Shipping address is the same as my billing address</CheckLabel>
+                                        <CheckInput type="checkbox" id="SameAddress"/>
+                                        <CheckLabel htmlFor="SameAddress">Shipping address is the same as my billing address</CheckLabel>
                                     </Flex>
                                     <Flex className="align-items-center">
-                                        <CheckInput type="checkbox"/>
-                                        <CheckLabel>Save this information for next time</CheckLabel>
+                                        <CheckInput type="checkbox" id="SaveInformation"/>
+                                        <CheckLabel htmlFor="SaveInformation">Save this information for next time</CheckLabel>
                                     </Flex>
                                 </Col>
 
@@ -149,22 +143,20 @@ const Checkout = () => {
                                 </Col>
 
                                 <h4>Payment</h4>
-
                                 <Col col={12}>
                                     <Flex className="align-items-center">
-                                        <RadioInput type="radio"/>
-                                        <CheckLabel>Credit card</CheckLabel>
+                                        <RadioInput type="radio" id="CreditCard"/>
+                                        <CheckLabel htmlFor="CreditCard">Credit card</CheckLabel>
                                     </Flex>
                                     <Flex className="align-items-center">
-                                        <RadioInput type="radio"/>
-                                        <CheckLabel>Debit card</CheckLabel>
+                                        <RadioInput type="radio" id="DebitCard"/>
+                                        <CheckLabel htmlFor="DebitCard">Debit card</CheckLabel>
                                     </Flex>
                                     <Flex className="align-items-center">
-                                        <RadioInput type="radio"/>
-                                        <CheckLabel>PayPal</CheckLabel>
+                                        <RadioInput type="radio" id="PayPal"/>
+                                        <CheckLabel htmlFor="PayPal">PayPal</CheckLabel>
                                     </Flex>
                                 </Col>
-
                                 <Col col={12} md={6}>
                                     <Label>Name on card</Label>
                                     <Input/>
@@ -223,7 +215,6 @@ const ContinueBtn = styled.button`
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
-  font-weight: 400;
   line-height: 1.5;
   text-align: center;
   margin-top:0.5rem;
@@ -245,13 +236,12 @@ const SmallMark = styled.small`
 const RadioInput = styled.input`
   width: 1em;
   height: 1em;
-  margin-right: 0.5rem;
+  margin-right: .5rem;
 
   :focus {
     border-color: #86b7fe;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
     border-radius: 50%;
-    -webkit-appearance: none;
     appearance: none;
   }
   
@@ -324,6 +314,10 @@ const UserInput = styled.input`
     border-color: #86b7fe;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
   }
+  ::placeholder{
+    color: #6c757d;
+    font-weight: 500;
+  }
 `;
 
 const InputGroupText = styled.span`
@@ -356,6 +350,11 @@ const Input = styled.input`
     border-color: #86b7fe;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
   }
+
+  ::placeholder{
+    color: #6c757d;
+    font-weight: 500;
+  }
 `;
 
 const Label = styled.label`
@@ -373,6 +372,15 @@ const PromoBtn = styled.button`
   padding: .375rem .75rem;
   font-size: 1rem;
   border-radius: 0 .25rem 0.25rem 0;
+
+  :hover {
+    background-color: #5c636a;
+    border-color: #565e64;
+  }
+
+  :focus {
+    box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5);
+  }
 `;
 
 const PromoInput = styled.input`
@@ -382,9 +390,7 @@ const PromoInput = styled.input`
   font-weight: 400;
   color: #212529;
   background-color: #fff;
-  border-top: 1px solid #ced4da;
-  border-bottom: 1px solid #ced4da;
-  border-left: 1px solid #ced4da;
+  border: 1px solid #ced4da;
   border-right: none;
   border-radius: .25rem 0 0 .25rem;
 
@@ -392,17 +398,17 @@ const PromoInput = styled.input`
     border-color: #86b7fe;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
   }
-`;
 
-const InputGroup = styled.div`
-  display: flex;
+  ::placeholder{
+    color: #6c757d;
+    font-weight: 500;
+  }
 `;
 
 const Promo = styled.form`
   padding: .5rem;
   display: flex;
   background-color: #fff;
-  background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
 `;
@@ -440,8 +446,6 @@ const ItemSmall = styled.small<{
 const ItemSpan = styled.span<{
     isActive?: boolean,
 }>`
-  margin-top: 0;
-  margin-bottom: 0;
   font-weight: 500;
   line-height: 1.2;
 
