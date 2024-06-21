@@ -115,8 +115,7 @@ const Desc = styled.p`
 `;
 
 const Main = styled.main`
-  padding-top: 60px;
-  padding-left: 6px;
+  padding: 60px 0 0 6px;
 `;
 
 const SearchBtn = styled.button`
@@ -217,8 +216,7 @@ const IconBtn = styled.button`
 
 const NavbarTitle = styled.a`
   color: #fff;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
+  padding: .3125rem 0;
   margin-right: 1rem;
   font-size: 1.25rem;
   white-space: nowrap;
@@ -227,8 +225,7 @@ const NavbarTitle = styled.a`
 const Nav = styled.nav`
   display: flex;
   align-items: center;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding: .5rem 0;
   background-color: #212529;
   position: fixed;
   top: 0;

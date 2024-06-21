@@ -4,11 +4,9 @@ import React from "react";
 
 
 
-
 const Heroes = () => {
     return (
         <HeroesRoot>
-
             {/* Section 1 */}
                 <OneHeroes>
                     <img className="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width={72} height={57}/>
@@ -17,25 +15,26 @@ const Heroes = () => {
                         <Desc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
                     </Col>
                     <Flex className="d-flex flex-column align-items-center flex-sm-row justify-content-sm-center">
-                        <PriButton className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-2">Primary button</PriButton>
-                        <SecButton className="w-100 w-sm-auto">Secondary</SecButton>
+                        <Button color="primary" className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-2">Primary button</Button>
+                        <Button color="secondary" className="w-100 w-sm-auto">Secondary</Button>
                     </Flex>
                 </OneHeroes>
 
             <GraySection/>
+
             {/* Section 2 */}
                 <OneHeroes isVisibleBorderBottom className="pb-0">
                     <Title>Centered screenshot</Title>
                     <Col lg={6} className="mx-auto">
-                        <Desc>222Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
+                        <Desc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
                     </Col>
                     <Flex className="d-flex flex-column align-items-center  flex-sm-row justify-content-sm-center mb-5">
-                        <PriButton className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-4">Primary button</PriButton>
-                        <SecButton className="w-100 w-sm-auto">Secondary</SecButton>
+                        <Button color="primary" className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-4">Primary button</Button>
+                        <Button color="secondary" className="w-100 w-sm-auto">Secondary</Button>
                     </Flex>
                     <Picture className="overflow-hidden">
                         <Container className="px-5">
-                            <SecondImg className="img-fluid rounded-3" src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-docs.png" alt="" width="100%" height="auto"/>
+                            <SecondImg className="img-fluid rounded-1" src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-docs.png"/>
                         </Container>
                     </Picture>
                 </OneHeroes>
@@ -43,84 +42,84 @@ const Heroes = () => {
             <GraySection/>
 
             {/* Section 3 */}
-            <Container>
-                <TwoHeroes>
+                <Container className="my-5 py-5 px-4">
                     <Row>
-                        <Col col={10} sm={8} lg={6} className="order-lg-last">
+                        <Col col={10} sm={8} lg={6} className="order-lg-last mt-lg-5">
                             <img className="d-block mx-lg-auto img-fluid" src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-themes.png" alt="" width="100%" height="auto"/>
                         </Col>
                         <Col col={12} lg={6}>
-                            <Title>Responsive left-aligned hero with image</Title>
+                            <Title className="pt-5 pt-lg-0">Responsive left-aligned hero with image</Title>
                             <Desc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
                             <Flex className="d-flex flex-column align-items-center flex-md-row">
-                                <PriButton className="w-100 w-md-auto mb-2 mb-md-0 mr-md-3">Primary</PriButton>
-                                <SecButton className="w-100 w-md-auto">Default</SecButton>
+                                <Button color="primary" className="w-100 w-md-auto mb-2 mb-md-0 mr-md-3">Primary</Button>
+                                <Button color="secondary" className="w-100 w-md-auto">Default</Button>
                             </Flex>
                         </Col>
                     </Row>
-                </TwoHeroes>
-            </Container>
+                </Container>
 
             <GraySection/>
 
             {/* Section 4 */}
-            <Container className="px-4 py-5">
+                <Container className="px-4 py-5">
                     {/*gx-lg-5調整在row裡的col之間的距離 x左右 y上下*/}
                     <Row className="gx-lg-5 py-5">
-                        <Col lg={7} className="my-lg-auto mt-3">
-                            <Title className="text-lg-left">Vertically centered hero sign-up form</Title>
+                        <Col lg={7} className="my-lg-auto pr-lg-5 mt-3">
+                            <Title className="text-center text-lg-left" >Vertically centered hero sign-up form</Title>
                             <Desc className="text-center text-lg-left">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</Desc>
                         </Col>
                         <Col md={10} lg={5} className="mx-auto mt-3">
                             <Box>
                                 <Input className="w-100 mb-3" type="email" placeholder="Email address"/>
                                 <Input className="w-100 mb-3" type="password" placeholder="Password"/>
-                                <div className="d-flex align-items-center mb-3">
-                                    <i className="fa-regular fa-square mr-2"></i>
-                                    Remember me
+
+                                <div className="mb-3 d-flex align-items-center">
+                                    <input className="mr-2" type="checkbox" id="remember"/>
+                                    <label htmlFor="remember">Remember me</label>
                                 </div>
-                                <PriButton className="w-100">Sign up</PriButton>
+
+                                <Button color="primary" className="w-100">Sign up</Button>
                                 <hr className="my-4"/>
-                                <p className="fs-6 text-left">By clicking Sign up, you agree to the terms of use.</p>
+                                <Hint className="fs-6">By clicking Sign up, you agree to the terms of use.</Hint>
                             </Box>
                         </Col>
                     </Row>
-            </Container>
+                </Container>
 
             <GraySection/>
 
             {/* Section 5 */}
-            <Container className="my-5">
+                <Container className="my-5">
                     <ShadowColRow>
                         <Col lg={7} className="px-lg-5 pt-lg-3 pb-lg-5">
                             <Title>Border hero with cropped image and shadows</Title>
                             <Desc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</Desc>
                             <Flex className="d-flex flex-column align-items-center flex-md-row">
-                                <PriButton className="w-100 w-md-auto mb-2 mb-md-4 mb-lg-0 mr-md-3">Primary</PriButton>
-                                <SecButton className="w-100 w-md-auto mb-5 mb-md-4 mb-lg-0">Default</SecButton>
+                                <Button color="primary" className="w-100 w-md-auto mb-2 mb-md-4 mb-lg-0 mr-md-3">Primary</Button>
+                                <Button color="secondary" className="w-100 w-md-auto mb-5 mb-md-4 mb-lg-0">Default</Button>
                             </Flex>
                         </Col>
                         <ShadowCol lg={4}>
                             <img className="d-block mx-lg-auto img-fluid" src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-docs.png" alt="" width="700" height="auto"/>
                         </ShadowCol>
                     </ShadowColRow>
-            </Container>
+                </Container>
 
             <GraySection/>
 
             {/* Section 6 */}
-                <ThirdHeroes>
+                <TwoHeroes>
                     <div className="py-5">
                         <DTitle>Dark mode hero</DTitle>
                         <Col lg={6} className="mx-auto">
                             <QDesc>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</QDesc>
                         </Col>
                         <Flex className="d-flex flex-column align-items-center flex-sm-row justify-content-sm-center">
-                            <CusButton className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-4">Custom button</CusButton>
-                            <WButton className="w-100 w-sm-auto">Secondary</WButton>
+                            <Button color="blue" className="w-100 w-sm-auto mb-2 mb-sm-0 mr-sm-4">Custom button</Button>
+                            <Button color="black" className="w-100 w-sm-auto">Secondary</Button>
                         </Flex>
                     </div>
-                </ThirdHeroes>
+                </TwoHeroes>
 
             <GraySection/>
 
@@ -131,33 +130,8 @@ const Heroes = () => {
 
 export default Heroes;
 
-const WButton = styled.button`
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  border-radius: .3rem;
-  font-weight: 400;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  border: 1px solid;
-  color: #f8f9fa;
-  border-color: #f8f9fa;
-`;
-
-const CusButton = styled.button`
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  border-radius: .3rem;
-  font-weight: 400;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  border: 1px solid;
-  color: #0dcaf0;
-  border-color: #0dcaf0;
-`;
-
 const QDesc = styled.p`
   font-size: 1.25rem;
-  font-weight: 300;
   margin-bottom: 1.5rem;
   color: #6c757d;
 `;
@@ -167,13 +141,9 @@ const DTitle = styled.h1`
   color: white;
 `;
 
-const ThirdHeroes = styled.div`
+const TwoHeroes = styled.div`
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  display: block;
+  padding: 3rem 1.5rem;
   background-color: #212529;
 `;
 
@@ -190,13 +160,21 @@ const Box = styled.div`
 
 const Input = styled.input`
   margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 400;
   padding: 1rem .75rem;
   color: #212529;
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: .25rem;
+
+  :focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+  }
+  
+  ::placeholder{
+    color: black;
+  }
 `;
 
 const ShadowCol = styled(Col)`
@@ -213,8 +191,7 @@ const ShadowColRow = styled(Row)`
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   border: 1px solid #dee2e6;
   border-radius: .3rem;
-  padding: 1.5rem;
-  padding-bottom: 0;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   align-items: center;
   
   ${media.lg`
@@ -222,36 +199,85 @@ const ShadowColRow = styled(Row)`
     padding-top: 3rem;
   `}
 `;
+
 const SecondImg = styled.img`
   border: 1px solid #dee2e6;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 700px;
 `;
 
-const SecButton = styled.button`
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  border-radius: .3rem;
-  font-weight: 400;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  border: 1px solid;
+const Hint = styled.p`
   color: #6c757d;
-  border-color: #6c757d;
-  background-color: transparent;
+  font-weight: 500;
+  font-size: .875em;
 `;
 
-const PriButton = styled.button`
-  padding: .5rem 1rem;
+const Button = styled.button<{
+    color: string,
+}>`
+  padding: .5rem 1.5rem;
   font-size: 1.25rem;
   border-radius: .3rem;
-  font-weight: 400;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  border: 1px solid;
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+
+  ${props => props.color === 'primary' && css`
+    border: 1px solid #0d6efd;
+    color: #fff;
+    background-color: #0d6efd;
+
+    :hover {
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
+
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
+    }
+  `}
+
+  ${props => props.color === 'secondary' && css`
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    background-color: white;
+
+    :hover {
+      color: #fff;
+      background-color: #6c757d;
+    }
+
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(108, 117, 125, .5);
+    }
+  `}
+
+  ${props => props.color === 'blue' && css`
+    border: 1px solid #0dcaf0;
+    color: #0dcaf0;
+
+    :hover {
+      color: #000;
+      background-color: #0dcaf0;
+    }
+
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(13, 202, 240, .5);
+    }
+  `}
+
+  ${props => props.color === 'black' && css`
+    border: 1px solid  #f8f9fa;
+    color: #f8f9fa;
+
+    :hover {
+      color: #000;
+      background-color: #f8f9fa;
+    }
+
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(248, 249, 250, .5);
+    }
+  `}
 `;
 
 const Picture = styled.div`
@@ -260,22 +286,12 @@ const Picture = styled.div`
 
 const Desc = styled.p`
   font-size: 1.25rem;
-  font-weight: 300;
   margin-bottom: 1.5rem;
 `;
 
 const Title = styled.h1`
+  font-size: calc(1.425rem + 2.1vw);
   font-weight: 700;
-`;
-
-const TwoHeroes = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  display: block;
 `;
 
 const OneHeroes = styled.div<{
@@ -283,9 +299,7 @@ const OneHeroes = styled.div<{
 }>`
   text-align: center;
   padding: 3rem 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  display: block;
+  margin: 3rem 0;
 
   ${props => props.isVisibleBorderBottom && css`
     border-bottom: 1px solid #dee2e6 !important;

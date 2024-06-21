@@ -3,6 +3,55 @@ import styled from "styled-components";
 import React from "react";
 
 
+const data = [
+    {id: '1', iconCode: 'fa-regular fa-clone fa-2x'},
+    {id: '2', iconCode: 'fa-regular fa-circle-user fa-2x'},
+    {id: '3', iconCode: 'fa-solid fa-sliders fa-2x'},
+];
+
+const data2 = [
+    {id: '1', iconCode: 'fa-solid fa-sliders'},
+    {id: '2', iconCode: 'fa-solid fa-microchip'},
+    {id: '3', iconCode: 'fa-solid fa-screwdriver-wrench'},
+];
+
+const data3 = [
+    {
+        id: '1',
+        backgroundUrl: 'https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-1.jpg',
+        title: 'Short title, long jacket',
+        landmark:'Earth',
+        days:'3d',
+    },
+    {
+        id: '2',
+        backgroundUrl: 'https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-2.jpg',
+        title: 'Much longer title that wraps to multiple lines',
+        landmark:'Pakistan',
+        days:'4d',
+    },
+    {
+        id: '3',
+        backgroundUrl: 'https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-3.jpg',
+        title: 'Another longer title belongs here',
+        landmark:'California',
+        days:'5d',
+    },
+];
+
+const data4 = [
+    {id: '1', iconCode: 'fa-solid fa-square-rss fa-2x'},
+    {id: '2', iconCode: 'fa-solid fa-square-up-right fa-2x'},
+    {id: '3', iconCode: 'fa-solid fa-square-poll-horizontal fa-2x'},
+    {id: '4', iconCode: 'fa-solid fa-square-share-nodes fa-2x'},
+    {id: '5', iconCode: 'fa-solid fa-square-parking fa-2x'},
+    {id: '6', iconCode: 'fa-solid fa-square-caret-up fa-2x'},
+    {id: '7', iconCode: 'fa-solid fa-square-h fa-2x'},
+    {id: '8', iconCode: 'fa-solid fa-square-poll-vertical fa-2x'},
+];
+
+
+
 const Features = () => {
     return (
         <FeaturesRoot>
@@ -11,33 +60,17 @@ const Features = () => {
             <Container className="px-4 py-5">
                 <TopTitle>Columns with icons</TopTitle>
                 <Row className="g-4 py-5 d-flex flex-column flex-lg-row">
-                    <Col lg={4}>
-                        <FirstIcon className="fa-regular fa-clone fa-2x mb-2"></FirstIcon>
-                        <H4Title>Featured title</H4Title>
-                        <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <Action>
-                            Call to action
-                            <i className="fa-solid fa-chevron-right ml-1"></i>
-                        </Action>
-                    </Col>
-                    <Col lg={4}>
-                        <FirstIcon className="fa-regular fa-circle-user fa-2x mb-2"></FirstIcon>
-                        <H4Title>Featured title</H4Title>
-                        <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <Action>
-                            Call to action
-                            <i className="fa-solid fa-chevron-right ml-1"></i>
-                        </Action>
-                    </Col>
-                    <Col lg={4}>
-                        <FirstIcon className="fa-solid fa-sliders fa-2x mb-2"></FirstIcon>
-                        <H4Title>Featured title</H4Title>
-                        <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <Action>
-                            Call to action
-                            <i className="fa-solid fa-chevron-right ml-1"></i>
-                        </Action>
-                    </Col>
+                    {data.map(row => (
+                        <Col lg={4} key={row.id}>
+                            <FirstIcon className={`${row.iconCode} mb-2`}></FirstIcon>
+                            <H4Title>Featured title</H4Title>
+                            <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                            <Action>
+                                Call to action
+                                <i className="fa-solid fa-chevron-right ml-1"></i>
+                            </Action>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
 
@@ -47,30 +80,16 @@ const Features = () => {
             <Container className="px-4 py-5">
                 <TopTitle>Hanging icons</TopTitle>
                     <Row className="g-4 py-5 d-flex flex-column flex-lg-row">
-                        <Col lg={4} className="d-flex align-items-start">
-                            <SecondIcon className="fa-solid fa-sliders mt-1"></SecondIcon>
-                            <div>
-                                <H4Title className="mb-1">Featured title</H4Title>
-                                <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                                <PriButton>Primary button</PriButton>
-                            </div>
-                        </Col>
-                        <Col lg={4} className="d-flex align-items-start">
-                            <SecondIcon className="fa-solid fa-microchip mt-1"></SecondIcon>
-                            <div>
-                                <H4Title className="mb-1">Featured title</H4Title>
-                                <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                                <PriButton>Primary button</PriButton>
-                            </div>
-                        </Col>
-                        <Col lg={4} className="d-flex align-items-start">
-                            <SecondIcon className="fa-solid fa-screwdriver-wrench mt-1"></SecondIcon>
-                            <div>
-                                <H4Title className="mb-1">Featured title</H4Title>
-                                <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                                <PriButton>Primary button</PriButton>
-                            </div>
-                        </Col>
+                        {data2.map(row => (
+                            <Col lg={4} className="d-flex align-items-start" key={row.id}>
+                                <SecondIcon className={`${row.iconCode} mt-1`}></SecondIcon>
+                                <div>
+                                    <H4Title className="mb-1">Featured title</H4Title>
+                                    <p className="mb-3">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                                    <PriButton>Primary button</PriButton>
+                                </div>
+                            </Col>
+                        ))}
                     </Row>
             </Container>
 
@@ -80,54 +99,24 @@ const Features = () => {
             <Container className="px-4 py-5">
                 <TopTitle>Custom cards</TopTitle>
                 <Row className="g-3 py-5">
-                    <Col lg={4}>
-                        <CardOne>
-                            <div className="d-flex flex-column h-100 px-5 py-4">
-                                <H3Title className="pt-5 mt-5 mb-3">Short title, long jacket</H3Title>
-                                <div className="d-flex align-items-center justify-content-between mb-3 mt-auto">
-                                    <BootImg src="https://github.com/twbs.png" alt=""/>
-                                    <div>
-                                        <i className="fa-solid fa-map-pin mr-2"></i>
-                                        <small className="mr-3">Earth</small>
-                                        <i className="fa-regular fa-calendar-days mr-2"></i>
-                                        <small>3d</small>
+                    {data3.map(row => (
+                        <Col lg={4} key={row.id}>
+                            <Card bgUrl={row.backgroundUrl}>
+                                <div className="d-flex flex-column h-100 px-5 py-4">
+                                    <H3Title className="pt-5 mt-5 mb-3">{row.title}</H3Title>
+                                    <div className="d-flex align-items-center justify-content-between mb-3 mt-auto">
+                                        <BootImg src="https://github.com/twbs.png" alt=""/>
+                                        <div>
+                                            <i className="fa-solid fa-map-pin mr-2"></i>
+                                            <small className="mr-3">{row.landmark}</small>
+                                            <i className="fa-regular fa-calendar-days mr-2"></i>
+                                            <small>{row.days}</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </CardOne>
-                    </Col>
-                    <Col lg={4}>
-                        <CardTwo>
-                            <div className="d-flex flex-column h-100 px-5 py-4">
-                                <H3Title className="pt-5 mt-5 mb-3">Much longer title that wraps to multiple lines</H3Title>
-                                <div className="d-flex align-items-center justify-content-between mb-3 mt-auto">
-                                    <BootImg src="https://github.com/twbs.png" alt=""/>
-                                    <div>
-                                        <i className="fa-solid fa-map-pin mr-2"></i>
-                                        <small className="mr-3">Pakistan</small>
-                                        <i className="fa-regular fa-calendar-days mr-2"></i>
-                                        <small>4d</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </CardTwo>
-                    </Col>
-                    <Col lg={4}>
-                        <CardThree>
-                            <div className="d-flex flex-column h-100 px-5 py-4">
-                                <H3Title className="pt-5 mt-5 mb-3">Another longer title belongs here</H3Title>
-                                <div className="d-flex align-items-center justify-content-between mb-3 mt-auto">
-                                    <BootImg src="https://github.com/twbs.png" alt=""/>
-                                    <div>
-                                        <i className="fa-solid fa-map-pin mr-2"></i>
-                                        <small className="mr-3">California</small>
-                                        <i className="fa-regular fa-calendar-days mr-2"></i>
-                                        <small>5d</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </CardThree>
-                    </Col>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
 
@@ -137,62 +126,15 @@ const Features = () => {
             <Container className="px-4 py-5">
                 <TopTitle>Icon grid</TopTitle>
                 <Row className="g-4 py-5 d-flex flex-column flex-sm-row">
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-rss fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-up-right fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-poll-horizontal fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-share-nodes fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-parking fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-caret-up fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-h fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
-                    <Col sm={6} md={4} lg={3} className="d-flex align-items-start">
-                        <FourthIcon className="fa-solid fa-square-poll-vertical fa-2x mr-3"></FourthIcon>
-                        <div>
-                            <H4Title className="fw-bold mb-0">Featured title</H4Title>
-                            <p>Paragraph of text beneath the heading to explain the heading.</p>
-                        </div>
-                    </Col>
+                    {data4.map(row => (
+                        <Col sm={6} md={4} lg={3} className="d-flex align-items-start mb-3" key={row.id}>
+                            <FourthIcon className={`${row.iconCode} mr-3`}></FourthIcon>
+                            <div>
+                                <H4Title className="fw-bold mb-0">Featured title</H4Title>
+                                <p>Paragraph of text beneath the heading to explain the heading.</p>
+                            </div>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
 
@@ -210,8 +152,7 @@ const FourthIcon = styled.i`
 
 const BootImg = styled.img`
   border-radius: 50%;
-  border: 1px solid;
-  border-color: #fff;
+  border: 1px solid #fff;
   width: 32px;
   height: 32px;
 `;
@@ -220,8 +161,9 @@ const H3Title= styled.h3`
   font-weight:900;
 `;
 
-const CardThree = styled.div`
-  background-image: url(https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-3.jpg);
+const Card = styled.div<{
+    bgUrl: string,
+}>`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -234,45 +176,13 @@ const CardThree = styled.div`
   flex-direction: column;
   word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, .125);
-`;
-
-const CardTwo = styled.div`
-  background-image: url(https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-2.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: #212529;
-  border-radius: 1rem;
-  color: #fff;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  border: 1px solid rgba(0, 0, 0, .125);
-`;
-
-const CardOne = styled.div`
-  background-image: url(https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: #212529;
-  border-radius: 1rem;
-  color: #fff;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  border: 1px solid rgba(0, 0, 0, .125);
+  background-image: url(${props => props.bgUrl});
 `;
 
 const PriButton = styled.button`
   color: #fff;
   background-color: #0d6efd;
-  border-color: #0d6efd;
-  border: 1px solid;
+  border: 1px solid #0d6efd;
   padding: .4rem .75rem;
   font-size: 1rem;
   border-radius: .25rem;
@@ -298,7 +208,7 @@ const Action= styled.button`
   font-weight:bold;
   text-decoration: underline;
   align-items: center;
-  padding: 0rem;
+  padding: 0;
 `;
 
 const H4Title = styled.h4`

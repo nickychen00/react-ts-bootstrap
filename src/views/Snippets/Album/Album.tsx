@@ -58,8 +58,8 @@ const Album = () => {
                             Make it short and sweet, but not too short so folks don’t simply skip over it
                             entirely.</SecondP>
                         <div>
-                            <BlueButton>Main call to action</BlueButton>
-                            <GreyButton>Secondary action</GreyButton>
+                            <Button color='blue'>Main call to action</Button>
+                            <Button color='grey'>Secondary action</Button>
                         </div>
                     </Col>
                 </Row>
@@ -90,8 +90,8 @@ const Album = () => {
                                         </p>
                                         <CardButBlock>
                                             <BtnGroup>
-                                                <CardBtnL>View</CardBtnL>
-                                                <CardBtnR>Edit</CardBtnR>
+                                                <CardBtn direction="left">View</CardBtn>
+                                                <CardBtn direction="right">Edit</CardBtn>
                                             </BtnGroup>
                                             <Small>9 mins</Small>
                                         </CardButBlock>
@@ -151,36 +151,16 @@ const Small = styled.small`
   font-weight: 600;
 `;
 
-const CardBtnR = styled.button`
-  padding: .25rem .5rem;
-  font-size: .875rem;
-  font-weight: 600;
-  color: #6c757d;
-  border-radius: 0 .2rem .2rem 0;
-  border-top: 1px solid #6c757d;
-  border-bottom: 1px solid #6c757d;
-  border-right: 1px solid #6c757d;
-  text-align: center;
-
-  :hover {
-    background-color: #6c757d;
-    color: white;
-  }
-
-  :focus {
-    box-shadow: 0 0 0 .25rem rgba(108, 117, 125, .5);
-  }
-`;
-
-const CardBtnL = styled.button`
+const CardBtn = styled.button<{
+    direction: string,
+}>`
   padding: .25rem .5rem;
   font-size: .875rem;
   font-weight: 600;
   color: #6c757d;
   border-radius: .2rem 0 0 .2rem;
-  border: 1px solid #6c757d;
   text-align: center;
-
+  
   :hover {
     background-color: #6c757d;
     color: white;
@@ -189,6 +169,16 @@ const CardBtnL = styled.button`
   :focus {
     box-shadow: 0 0 0 .25rem rgba(108, 117, 125, .5);
   }
+
+  ${props => props.direction === 'left' && css`
+    border: 1px solid #6c757d;
+  `}
+
+  ${props => props.direction === 'right' && css`
+    border-radius: 0 .2rem .2rem 0;
+    border: 1px solid #6c757d;
+    border-left: none;
+  `}
 `;
 
 const BtnGroup = styled.div`
@@ -217,7 +207,6 @@ const Card = styled.div`
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
 `;
@@ -227,54 +216,45 @@ const ThirdBlock = styled.div`
   padding: 3rem 0;
 `;
 
-const GreyButton = styled.button`
+const Button = styled.button<{
+    color: string,
+}>`
   margin: 25px 2px;
   padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
   color: #fff;
-  background-color: #6c757d;
-  border: 1px solid #6c757d;
   border-radius: .25rem;
   text-align: center;
 
-  :hover {
-    background-color: #5c636a;
-    border-color: #565e64;
-  }
+  ${props => props.color === 'blue' && css`
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
 
-  :focus {
-    background-color: #5c636a;
-    border-color: #565e64;
-    box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5);
-  }
+    :hover {
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
 
-`;
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
+    }
+  `}
 
-const BlueButton = styled.button`
-  margin: 25px 2px;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #fff;
-  background-color: #0d6efd;
-  border: 1px solid #0d6efd;
-  border-radius: .25rem;
-  text-align: center;
+  ${props => props.color === 'grey' && css`
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
 
-  :hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-  }
+    :hover {
+      background-color: #5c636a;
+      border-color: #565e64;
+    }
 
-  :focus {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-    box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
-  }
-
+    :focus {
+      box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5);
+    }
+  `}
 `;
 
 const SecondP = styled.p`

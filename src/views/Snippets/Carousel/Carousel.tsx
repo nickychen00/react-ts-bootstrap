@@ -86,9 +86,9 @@ const Carousel = () => {
                     <p className="ml-5">Some representative placeholder content for the first slide of the carousel.</p>
                     <SingBtn className="ml-5 my-3">Sing up today</SingBtn>
                     <a className="d-flex justify-content-center" href="#">
-                        <BarI className="fa-regular fa-window-minimize"></BarI>
-                        <BarI className="fa-regular fa-window-minimize"></BarI>
-                        <BarI className="fa-regular fa-window-minimize"></BarI>
+                        {Array.from({length: 3}).map((row, index) => (
+                            <BarI className="fa-regular fa-window-minimize" key={index.toString()}></BarI>
+                        ))}
                     </a>
                 </Container>
             </CarouselBlock>
@@ -187,11 +187,9 @@ const Divider = styled.hr`
 const RoundA = styled.a`
   color: #fff;
   background-color: #6c757d;
-  font-weight: 400;
   text-align: center;
   border: 1px solid #6c757d;
   padding: .375rem .75rem;
-  font-size: 1rem;
   border-radius: .25rem;
 
   :focus {
@@ -223,10 +221,12 @@ const SingBtn = styled.button`
   background-color: #0d6efd;
   border-color: #0d6efd;
 
-  :focus {
-    color: #fff;
+  :hover {
     background-color: #0b5ed7;
     border-color: #0a58ca;
+  }
+  
+  :focus {
     box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
   }
 `;
@@ -283,18 +283,18 @@ const IconBtn = styled.button`
 `;
 
 const SearchBtn = styled.button`
-  font-weight: 400;
   color: #198754;;
   text-align: center;
   border: 1px solid #198754;;
   padding: .375rem .75rem;
-  font-size: 1rem;
   border-radius: .25rem;
 
-  :focus {
+  :hover {
     color: #fff;
     background-color: #198754;
-    border-color: #198754;
+  }
+  
+  :focus {
     box-shadow: 0 0 0 .25rem rgba(25, 135, 84, .5);
   }
 `;
@@ -303,8 +303,6 @@ const SearchInput = styled.input`
   display: block;
   width: 100%;
   padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
@@ -318,7 +316,6 @@ const SearchInput = styled.input`
 
   :focus {
     color: #212529;
-    background-color: #fff;
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
@@ -328,8 +325,6 @@ const SearchInput = styled.input`
 const Link = styled.a<{
     color: string,
 }>`
-  font-size: 1rem;
-  font-weight: 400;
   margin-right: 1rem;
 
   ${props => props.color === 'white' && css`
@@ -371,7 +366,6 @@ const Nav = styled.nav`
 `;
 
 const CarouselRoot = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   color: #5a5a5a;
 `;
